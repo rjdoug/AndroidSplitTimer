@@ -76,8 +76,8 @@ public class TimeLogActivity extends AppCompatActivity {
     // get current time and date and set it to the last reset label/textview. Then save
     public void resetTimerLog() {
         TextView lastLogReset = findViewById(R.id.log_tv_last_reset);
-        String timeStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm").format(Calendar.getInstance().getTime());
-        String format = String.format("Logging since: %s", timeStamp);
+        String timeStamp = new SimpleDateFormat("dd/MM/yyyy E HH:mm").format(Calendar.getInstance().getTime());
+        String format = String.format(timeStamp);
         lastLogReset.setText(format);
         Preferences.saveString(Preferences.LOG, this, format, Preferences.LOG_LAST_RESET);
     }
@@ -189,7 +189,7 @@ public class TimeLogActivity extends AppCompatActivity {
     private String formatTime(long millis) {
         int seconds = (int) (millis / 1000) % 60 ;
         int minutes = (int) ((millis / (1000*60)) % 60);
-        int hours   = (int) ((millis / (1000*60*60)) % 24);
+        int hours   = (int) ((millis / (1000*60*60)));
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 

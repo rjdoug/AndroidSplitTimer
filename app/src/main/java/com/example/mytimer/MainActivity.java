@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         method. Currently feels like a bit of a cheap way out, and I don't want it turning into a
         band-aid problem
        TODO: BUG - Seems to be a clock drift of sorts. Will resync itself when onPause is called
+       TODO: On the delete button add an are you sure boxK
      */
 
 
