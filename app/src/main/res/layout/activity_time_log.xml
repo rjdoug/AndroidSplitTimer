@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -41,12 +42,11 @@
     <ListView
         android:id="@+id/log_listview"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="290dp"
+        android:layout_margin="10dp"
         android:layout_weight="2"
         android:divider="@null"
-        android:dividerHeight="0dp"
-        android:layout_margin="10dp"
-        />
+        android:dividerHeight="0dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -55,77 +55,101 @@
         android:orientation="vertical">
 
         <View
+            android:id="@+id/hor_rule_2"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/ultra_red"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/log_tv_total_time_label"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:layout_marginBottom="2dp"/>
+
+        <View
+            android:id="@+id/hor_rule_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ultra_red"
+            app:layout_constraintBottom_toTopOf="@id/log_tv_logging_since_label"
+            app:layout_constraintTop_toBottomOf="@id/log_but_reset"
+            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/log_tv_total_time_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:text="Total Time"
             android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:textSize="30sp"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hor_rule_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/log_tv_total_time"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"
             />
 
         <TextView
             android:id="@+id/log_tv_total_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="00:00"
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@id/log_tv_total_time_label"
+            app:layout_constraintBottom_toTopOf="@id/log_but_reset"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"
+            />
 
 
         <Button
             android:id="@+id/log_but_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="Reset"
-            android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:textSize="30sp"
             android:padding="10dp"
-            app:layout_constraintTop_toTopOf="@id/log_tv_total_time"
+            app:layout_constraintTop_toBottomOf="@id/log_tv_total_time"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/log_tv_logging_since_label"
+            app:layout_constraintBottom_toTopOf="@id/hor_rule_3"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
             android:background="@drawable/button_state_home"
             android:onClick="onClickTimeLogReset"/>
 
         <TextView
             android:id="@+id/log_tv_logging_since_label"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/log_but_reset"
-            app:layout_constraintBottom_toTopOf="@id/log_tv_last_reset"
-            android:text="Logging Since:"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
             android:gravity="center"
+            android:text="Logging Since:"
+            android:textAlignment="center"
             android:textSize="25sp"
-            >
-        </TextView>
+            app:layout_constraintBottom_toTopOf="@id/log_tv_last_reset"
+            app:layout_constraintTop_toBottomOf="@id/hor_rule_3"/>
 
         <TextView
             android:id="@+id/log_tv_last_reset"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:text="1/2/20 12:59"
-            android:textSize="20sp"
+            android:textSize="0dp"
             android:gravity="center"
             android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="30dp"
             app:layout_constraintTop_toBottomOf="@id/log_tv_logging_since_label"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="50sp"
+            android:textAlignment="center"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

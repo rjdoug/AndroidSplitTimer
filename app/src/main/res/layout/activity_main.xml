@@ -17,8 +17,8 @@
 
         <TextView
             android:id="@+id/tv_timer_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@android:color/transparent"
             android:gravity="center"
             android:textSize="30sp"
@@ -28,17 +28,20 @@
             app:layout_constraintTop_toBottomOf="@+id/button_delete"
             android:layout_marginTop="10dp"
             android:onClick="onClickMainTextViewLabel"
-            android:focusable="true" />
+            android:focusable="true"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
 
         <Chronometer
             android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@id/tv_timer_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:textSize="60sp"/>
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
 
         <ImageButton
             android:id="@+id/button_previous_timer"
@@ -111,25 +114,30 @@
     <Button
         android:id="@+id/button_start"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_reset"
         android:text="@string/start_button_label"
         android:onClick="onClickStartButton"
-        android:theme="@style/ButtonTheme"/>
+        android:theme="@style/ButtonTheme"
+        android:textSize="22sp"/>
 
     <Button
         android:id="@+id/button_reset"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_start"
-        android:layout_marginBottom="60dp"
+        android:textSize="22sp"
+
         android:text="@string/reset_button_label"
         android:onClick="onClickResetButton"
         android:theme="@style/ButtonTheme"/>
@@ -144,36 +152,42 @@
         <TextView
             android:id="@+id/tv_total_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/chronometer_total"
             android:gravity="center"
             android:textSize="30sp"
-            android:text="Total Time" />
+            android:text="Total Time"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
 
         <Chronometer
             android:id="@+id/chronometer_total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toTopOf="@id/tv_total_time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_time"
             app:layout_constraintBottom_toTopOf="@id/button_total_reset"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:textSize="50sp" />
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
 
         <Button
             android:id="@+id/button_total_reset"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/chronometer_total"
             android:layout_marginRight="80dp"
             android:layout_marginLeft="80dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:text="@string/reset_button_label"
             android:onClick="onClickResetTotalButton"
-            android:theme="@style/ButtonTheme"/>
+            android:theme="@style/ButtonTheme"
+            android:textSize="18sp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
