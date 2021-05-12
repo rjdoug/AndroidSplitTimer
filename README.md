@@ -5,9 +5,7 @@ go into the code to change their names. Each paper had a timer which you could s
 that session. On another page was your log, you could reset it whenever you want. On reset it would store the current date and time and display it as 'last log reset'. Pretty
 much this log would count all your times and total time since last reset, so you could get an idea of where you were dedicating your time.
 
-Now my android version as taken leaps an bounds since this original monstrosity. It is now dynamic, so add as many timers as you like. A lot of small issues I had in the original
-have been solved. However there are still a fair share of bugs. There is still a lot of work to be done. I've made it to an extent where I can use it easily with no issues and
-have chosen to focus on other things. My biggest issue is xml and making my elements be more dynamic based on screen size. So my apologies if you have a small screen, you're in
-for a visually unappealing time. 
+Now my android version has taken leaps an bounds since this original monstrosity. It is now dynamic, so add as many timers as you like. A lot of small issues I had in the original
+have been solved. There is still a lot of quality of life changes to be made. My biggest issue is xml and making my elements be more dynamic based on screen size. So my apologies if you have a small screen, you're in for a visually unappealing time. Looks nice on a samsung A50/A5.
 
-Please if you have any ideas, or tips or critism, let me know :)
+Please if you have any ideas, tips or critism, let me know :)
