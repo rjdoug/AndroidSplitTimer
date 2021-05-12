@@ -1,5 +1,5 @@
 # AndroidSplitTimer
-A lot of the time when studying, I would focus on the papers I like most, then when it got to cruch time, so of my knowledge on my less favorable papers were lacking. So I created
+A lot of the time when studying, I would focus on the papers I like most, then when it got to cruch time, my knowledge on my less favorable papers were lacking. So I created
 this. Originally it was done un-dynamically in visual studio, last year. It was disgusting, but it did the job. Pretty much, there were 4 slots for papers, in which you'd need to
 go into the code to change their names. Each paper had a timer which you could start and stop. You could only run one at a time. At the bottom there would be a total time for
 that session. On another page was your log, you could reset it whenever you want. On reset it would store the current date and time and display it as 'last log reset'. Pretty
