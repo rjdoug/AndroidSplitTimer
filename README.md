@@ -8,4 +8,4 @@ much this log would count all your times and total time since last reset, so you
 Now my android version has taken leaps an bounds since this original monstrosity. It is now dynamic, so add as many timers as you like. A lot of small issues I had in the original
 have been solved. There is still a lot of quality of life changes to be made. My biggest issue is xml and making my elements be more dynamic based on screen size. So my apologies if you have a small screen, you're in for a visually unappealing time. Looks nice on a samsung A50/A5.
 
-Please if you have any ideas, tips or critism, let me know :)
+Please if you have any ideas, tips or criticism, let me know :)
